@@ -1,0 +1,39 @@
+section{
+  padding-bottom: 10px;
+  border-bottom: none;
+}
+.map {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 57px;
+  width: 385px;
+}
+
+.map-address {
+  padding-bottom: 5px;
+
+  .icon {
+    position: relative;
+    top: 5px;
+    width: auto;
+
+    svg {
+      fill: #005aeb
+    }
+  }
+}
+
+.nearby{
+  padding-bottom: 10px;
+}
+
+
+@media screen and (max-aspect-ratio: 16/9) {
+  @media screen and (max-width: 956px) {
+    .map{
+      height: 100px;
+      width: 100%;
+    }
+  }
+}

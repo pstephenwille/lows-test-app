@@ -1,1 +1,236 @@
-/* You can add global styles to this file, and also import other style files */
+/* css reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* app */
+$font-size-xsm: 12px;
+$font-size-sm: 14px;
+$font-size-md: 18px;
+$font-size-lg: 22px;
+
+body {
+  background-color: #ebecf0;
+  color: #001959;
+  font-family: "Centra No1", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  background: white;
+  box-shadow: 0 1px 0 0 rgba(0, 11, 38, 0.12);
+  border-bottom: solid 1px darkgray;
+  position: relative;
+}
+
+nav a:last-child {
+  margin-right: 50%;
+}
+
+section {
+  background-color: white;
+  padding: 10px 10px 15px 10px;
+  border-bottom: solid 1px lightgray;
+}
+
+button {
+  &.__cta {
+    background-color: #005aeb;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 4px 16px;
+  }
+}
+
+.link {
+  color: #005aeb;
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 2em;
+  display: flex;
+  align-items: center;
+
+  svg {
+    fill: #005aeb;
+  }
+
+  &__chevron {
+    @extend .link;
+    position: relative;
+    top: -3px;
+    fill: #005aeb;
+
+    svg {
+      width: 1.4em;
+      height: 1.4em;
+    }
+  }
+}
+
+.icon {
+  font-size: 24px;
+  width: 50%;
+  flex-wrap: wrap;
+
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: rgb(70, 82, 128);
+  }
+}
+
+.icon__text {
+  color: rgb(70, 82, 128);
+  line-height: 1.4rem;
+  vertical-align: top;
+  padding-left: 10px;
+  font-size: $font-size-sm;
+
+  &--xsm {
+    @extend .icon__text;
+    font-size: $font-size-xsm;
+  }
+}
+
+.flex__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.flex__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flex--right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.text {
+  font-size: $font-size-sm;
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+
+  &--bold {
+    @extend .text;
+    font-weight: 700;
+  }
+
+  &__title {
+    @extend .text--bold;
+
+    &--sm {
+      @extend .text--bold;
+      font-size: $font-size-sm;
+    }
+
+    &--md {
+      @extend .text--bold;
+      font-size: $font-size-md
+    }
+
+    &--lg {
+      @extend .text--bold;
+      font-size: $font-size-lg;
+    }
+  }
+}
+
+#spacer {
+  padding: 15px;
+  background-color: white;
+  border-bottom: solid 1px lightgray;
+}
+
+.rounded-corner {
+  overflow: hidden;
+
+  &__all {
+    @extend .rounded-corner;
+    border-radius: 8px;
+  }
+
+  &__top-left {
+    @extend .rounded-corner;
+    border-top-left-radius: 8px;
+  }
+
+  &__top-right {
+    @extend .rounded-corner;
+    border-top-right-radius: 8px;
+  }
+
+  &__bottom-left {
+    @extend .rounded-corner;
+    border-bottom-left-radius: 8px;
+  }
+
+  &__bottom-right {
+    @extend .rounded-corner;
+    border-bottom-right-radius: 8px;
+  }
+}
+
+

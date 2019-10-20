@@ -1,0 +1,36 @@
+<div id="carouselWrap">
+
+  <div #bgImages [id]="'bgImg'+(i + 1)" class="carousel"
+       *ngFor="let img of hotelImages; let i = index"
+       [ngStyle]="{backgroundImage:makeImageUrlString(i)}"></div>
+
+  <button class="left" (click)="getPrevImage()">
+    <svg aria-labelledby="prevImage-2265-title"
+         height="100%" role="img"
+         viewBox="0 0 24 24" width="100%"
+         xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink"><title
+      id="prevImage-2265-title">Previous Image</title>
+      <svg>
+        <path
+          d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+      </svg>
+    </svg>
+  </button>
+
+
+  <button class="right" (click)="getNextImage()">
+    <svg aria-labelledby="nextImage-6675-title" height="100%" role="img" viewBox="0 0 24 24" width="100%"
+         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title id="nextImage-6675-title">
+      Next Image</title>
+      <svg>
+        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+      </svg>
+    </svg>
+  </button>
+
+  <div id="imageCounter" class="text__title--sm">
+    {{this.currentImageNum }} / {{this.hotelImages.length}} - Room
+  </div>
+
+</div>

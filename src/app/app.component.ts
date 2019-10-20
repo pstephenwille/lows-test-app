@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'lows-test-project';
+  title:string = 'lows-test-project';
+  breadcrumbs:string = 'Red Roof Inn Seattle Airport - SEATAC, Seattle';
+  hotelTitle:string = 'Red Roof Inn Seattle Airport - SEATAC';
+
+  constructor() {}
+
 }

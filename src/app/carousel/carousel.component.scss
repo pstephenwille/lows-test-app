@@ -1,0 +1,47 @@
+#carouselWrap {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .carousel {
+    background-attachment: inherit;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 538px;
+    min-height: 277px;
+    position: absolute;
+    width: 100%;
+  }
+
+
+  button {
+    border-radius: 2500rem;
+    border: none;
+    box-shadow: 0 2px 0.25rem 0 rgba(0, 11, 38, 0.2);
+    height: 2rem;
+    margin: 10px;
+    min-height: 2rem;
+    position: absolute;
+    top: 50%;
+    width: 2rem;
+
+    &.right {
+      right: 0;
+      transform: translateY(-50%);
+    }
+
+    &.left {
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+
+  #imageCounter {
+    bottom: 0;
+    color: white;
+    padding: 10px;
+    position: absolute;
+  }
+
+}

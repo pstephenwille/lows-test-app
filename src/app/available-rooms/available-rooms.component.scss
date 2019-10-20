@@ -1,0 +1,52 @@
+
+#available-rooms {
+  margin-top: 50px;
+
+  .rooms {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    padding: 0;
+
+    .text__title--md {
+      margin-bottom: 8px;
+    }
+
+    .bg-img {
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 148px;
+      width: 408px;
+    }
+
+    .details {
+      justify-content: flex-start;
+      padding: 12px 0 12px 12px;
+
+      .link {
+        margin-top: auto;
+      }
+    }
+
+    button {
+      height: 41px;
+      margin: 12px 12px 12px auto;
+      width: 171px;
+    }
+  }
+}
+
+
+@media screen and (max-aspect-ratio: 16/9) {
+  @media screen and (max-width: 930px) {
+    #available-rooms {
+      .rooms {
+        flex-direction: column;
+        .bg-img{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
